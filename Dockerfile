@@ -26,4 +26,5 @@ RUN set -ex; \
 
 RUN set -ex; \
       curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein; \
-      chmod a+x lein
+      chmod a+x lein; \
+      mv lein /usr/local/bin
