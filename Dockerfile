@@ -8,7 +8,7 @@ RUN set -ex; \
 RUN set -ex; \
       apt-get update; \
       apt-get install -y --no-install-recommends \
-      unzip python python-pip python-dev jq gettext nodejs
+      unzip python python-pip python-dev jq gettext nodejs openjdk-7-jdk
 
 RUN npm i -g https://github.com/firstlookmedia/deployables
 
@@ -23,3 +23,7 @@ RUN set -ex; \
       curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"; \
       unzip awscli-bundle.zip; \
       ./awscli-bundle/install -b /usr/bin/aws
+
+RUN set -ex; \
+      curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein; \
+      chmod a+x lein
