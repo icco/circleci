@@ -8,7 +8,7 @@ RUN set -ex; \
 RUN set -ex; \
       apt-get update; \
       apt-get install -y --no-install-recommends \
-      unzip python python-pip python-dev jq gettext nodejs openjdk-7-jdk
+      unzip python python-pip python-dev jq gettext nodejs openjdk-7-jdk golang-go
 
 RUN npm i -g https://github.com/firstlookmedia/deployables
 
